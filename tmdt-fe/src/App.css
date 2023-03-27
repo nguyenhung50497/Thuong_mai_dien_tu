@@ -1,0 +1,607 @@
+.App {
+   text-align: center;
+}
+
+.App-logo {
+   height: 40vmin;
+   pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+   .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+   }
+}
+
+.App-header {
+   background-color: #282c34;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: calc(10px + 2vmin);
+   color: white;
+}
+
+.App-link {
+   color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+body {
+   background-color: rgb(231, 229, 229);
+}
+
+.themGioHang {
+   transition-duration: 0.4s;
+   border: 1px solid #ee4d2d;
+   border-radius: 5px;
+   height: 50px;
+   color: #ee4d2d;
+   background-color: rgba(255, 87, 34, 0.1);
+}
+.themGioHang:hover {
+   background-color: white;
+}
+
+.muaHang {
+   transition-duration: 0.4s;
+   border: 1px solid #ee4d2d;
+   border-radius: 5px;
+   height: 50px;
+   color: white;
+   background-color: #ee4d2d;
+}
+
+.muaHang:hover {
+   background-color: #fc6344;
+}
+
+.btn-add {
+   transition-duration: 0.4s;
+   border: 1px solid #ee4d2d;
+   border-radius: 5px;
+   color: white;
+   background-color: #ee4d2d;
+}
+.btn-add:hover {
+   background-color: #fc6344;
+}
+
+.add-product {
+   transition-duration: 0.4s;
+   border: 1px solid #ee4d2d;
+   border-radius: 5px;
+   height: 50px;
+   color: white;
+   background-color: #ee4d2d;
+}
+
+.add-product:hover {
+   background-color: #fc6344;
+}
+
+.xemShop {
+   transition-duration: 0.4s;
+   border: 1px solid gray;
+   border-radius: 2%;
+   height: 35px;
+   width: 130px;
+   color: gray;
+   background-color: white;
+}
+
+.xemShop:hover {
+   background-color: whitesmoke;
+}
+
+.card-category {
+   transition-duration: 0.4s;
+   border: 1px solid rgb(231, 229, 229);
+   background-color: white;
+}
+.card-category:hover {
+   border: 2px solid #e98773;
+}
+
+.card-product {
+   transition-duration: 0.4s;
+   border: 3px solid rgb(231, 229, 229);
+   background-color: white;
+}
+
+.card-product:hover {
+   border: 4px solid #ee4d2d;
+}
+
+.nut_dropdown {
+   background-color: rgb(238, 77, 45);
+   color: white;
+   border: none;
+}
+
+/* Thiết lập vị trí cho thẻ div với class dropdown*/
+.dropdown-menu {
+   position: relative;
+   display: inline-block;
+}
+
+/* Nội dung Dropdown */
+.noidung_dropdown {
+   /*Ẩn nội dụng các đường dẫn*/
+   display: none;
+   position: absolute;
+   background-color: white;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+}
+
+/* Thiết kế style cho các đường dẫn tronng Dropdown */
+.noidung_dropdown a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+}
+
+/* thay đổi màu background khi hover vào đường dẫn */
+.noidung_dropdown a:hover {
+   color: rgb(238, 77, 45) !important;
+   background-color: #ecebeb;
+}
+
+/* hiển thị nội dung dropdown khi hover */
+.dropdown-menu:hover .noidung_dropdown {
+   display: block;
+}
+
+/* Thay đổi màu background cho nút khi được hover */
+.dropdown-menu:hover .nut_dropdown {
+   background-color: rgb(238, 77, 45);
+}
+
+/*Dùng Để hiển thị nội dung*/
+.hienThi {
+   display: block;
+}
+
+.btn-file {
+   position: relative;
+   overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+   position: absolute;
+   top: 0;
+   right: 0;
+   min-width: 50px;
+   min-height: 50px;
+   font-size: 50px;
+   text-align: right;
+   filter: alpha(opacity=0);
+   opacity: 0;
+   outline: none;
+   background: white;
+   cursor: inherit;
+   display: block;
+}
+
+.check-box {
+   transform: scale(2);
+}
+
+input[type="checkbox"] {
+   position: relative;
+   appearance: none;
+   width: 30px;
+   height: 15px;
+   background: #ccc;
+   border-radius: 50px;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   transition: 0.4s;
+}
+
+input:checked[type="checkbox"] {
+   background: #fc6344;
+}
+
+input[type="checkbox"]::after {
+   position: absolute;
+   content: "";
+   width: 15px;
+   height: 15px;
+   top: 0;
+   left: 0;
+   background: #fff;
+   border-radius: 50%;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+   transform: scale(1.1);
+   transition: 0.4s;
+}
+
+input:checked[type="checkbox"]::after {
+   left: 50%;
+}
+
+body {
+   background-color: rgb(237, 237, 237);
+}
+
+.shopInterface {
+   width: 168px;
+   height: 30px;
+   border-radius: 5px;
+   background: none;
+   border: 2px white solid;
+   color: white;
+}
+
+.shopInterface:hover {
+   border: 2px orange solid;
+}
+
+table {
+   width: 100%;
+   text-align: center;
+}
+
+.password {
+   transition-duration: 0.3s;
+   width: 120px;
+   height: 40px;
+   background-color: rgb(238, 77, 45);
+   color: white;
+   border: none;
+   border-radius: 5px;
+}
+
+.password:hover {
+   width: 130px;
+   height: 50px;
+}
+
+.price {
+   width: 138px;
+   border-radius: 2px;
+   border: 1px solid rgb(238, 77, 45);
+   box-sizing: border-box;
+   outline: none;
+}
+.price:focus {
+   border: 2px solid #fc6344;
+}
+.btn-price {
+   height: 40px;
+   width: 100%;
+   background-color: rgb(238, 77, 45);
+   color: white;
+   border: none;
+   border-radius: 5px;
+   transition-duration: 0.4s;
+}
+.btn-price:hover {
+   background-color: #fc6344;
+}
+
+.selectdiv {
+   position: relative;
+   float: left;
+   min-width: 200px;
+   margin: 40px 33%;
+}
+
+.selectdiv1 {
+   position: relative;
+   float: left;
+   min-width: 200px;
+   margin: 40px 33%;
+}
+
+select::-ms-expand {
+   display: none;
+}
+
+.selectdiv select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   display: block;
+   width: 105%;
+   max-width: 300px;
+   height: 50px;
+   float: right;
+   margin: 5px 0px;
+   padding: 0px 24px;
+   font-size: 14px;
+   line-height: 1.75;
+   color: #333;
+   background-color: #ffffff;
+   background-image: none;
+   border: 1px solid #cccccc;
+   -ms-word-break: normal;
+   word-break: normal;
+}
+
+.selectdiv1 select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   display: block;
+   width: 120%;
+   max-width: 300px;
+   height: 50px;
+   float: right;
+   margin: 5px 0px;
+   padding: 0px 24px;
+   font-size: 14px;
+   line-height: 1.75;
+   color: #333;
+   background-color: #ffffff;
+   background-image: none;
+   border: 1px solid #cccccc;
+   -ms-word-break: normal;
+   word-break: normal;
+}
+
+.addressbtn {
+   background: white;
+   border: 1px gray solid;
+   height: 40px;
+   margin-left: 15px;
+   border-radius: 5px;
+   color: black;
+}
+
+.addressbtn:focus {
+   background: white;
+   border: 1px rgb(238, 77, 45) solid;
+   height: 40px;
+   margin-left: 15px;
+   border-radius: 5px;
+   color: rgb(238, 77, 45);
+}
+
+.closeModal {
+   width: 120px;
+   background: none;
+   color: black;
+   border: none;
+   height: 40px;
+   border-radius: 5px;
+}
+.closeModal:hover {
+   width: 120px;
+   background: rgb(212, 212, 212);
+   color: black;
+   border: none;
+   height: 40px;
+   border-radius: 5px;
+}
+.addModal {
+   width: 120px;
+   background: rgb(238, 77, 45);
+   color: white;
+   border: none;
+   height: 40px;
+   border-radius: 5px;
+}
+.addModal:hover {
+   width: 120px;
+   background: rgb(245, 100, 71);
+   color: white;
+   border: none;
+   height: 40px;
+   border-radius: 5px;
+}
+.wrapper {
+   display: inline-flex;
+   background: #fff;
+   height: 100px;
+   width: 400px;
+}
+.wrapper .option {
+   background: #fff;
+   width: 120px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   margin: 0 15px;
+   border-radius: 5px;
+   cursor: pointer;
+   padding: 0 15px;
+   border: 2px solid lightgrey;
+   transition: all 0.3s ease;
+   color: black;
+}
+
+input[type="radio"] {
+   display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2 {
+   border-color: rgb(238, 77, 45);
+   background: white;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot {
+   background: none;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before {
+   opacity: 1;
+   transform: scale(1);
+}
+.wrapper .option span {
+   font-size: 16px;
+   color: black;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span {
+   color: rgb(238, 77, 45);
+}
+.selectdiv3 {
+   position: relative;
+   float: left;
+   min-width: 200px;
+   margin: 0px 0%;
+   border-radius: 10px;
+}
+
+.selectdiv3:after {
+   font: 17px "Consolas", monospace;
+   color: #333;
+   -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -ms-transform: rotate(90deg);
+   transform: rotate(90deg);
+   right: 11px;
+   top: 18px;
+   padding: 0 0 2px;
+   border-bottom: 1px solid #999;
+   position: absolute;
+   pointer-events: none;
+}
+
+.selectdiv3 select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   display: block;
+   width: 100%;
+   max-width: 320px;
+   height: 40px;
+   float: right;
+   margin: 5px 0px;
+   padding: 0px 24px;
+   font-size: 16px;
+   line-height: 1.75;
+   color: #333;
+   background-color: #ffffff;
+   background-image: none;
+   border: 1px solid #cccccc;
+   -ms-word-break: normal;
+   word-break: normal;
+}
+
+.wrapper5 {
+   position: relative;
+   display: inline-block;
+   border: none;
+   font-size: 14px;
+   margin: 50px auto;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.wrapper5 input {
+   border: 0;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   position: absolute !important;
+   clip: rect(1px 1px 1px 1px);
+   clip: rect(1px, 1px, 1px, 1px);
+   opacity: 0;
+}
+
+.wrapper5 label {
+   position: relative;
+   float: right;
+   color: #c8c8c8;
+}
+
+.wrapper5 label:before {
+   margin: 5px;
+   content: "\f005";
+   font-family: "FontAwesome";
+   display: inline-block;
+   font-size: 1.5em;
+   color: #ccc;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   user-select: none;
+}
+
+.wrapper5 input:checked ~ label:before {
+   color: #ffc107;
+}
+
+.wrapper5 label:hover ~ label:before {
+   color: #ffdb70;
+}
+
+.wrapper5 label:hover:before {
+   color: #ffc107;
+}
+
+.notification {
+   background: none;
+   color: black;
+   font-size: 20px;
+   text-decoration: none;
+   padding: 10px 20px;
+   position: relative;
+   display: inline-block;
+   border-radius: 2px;
+}
+
+.notification .badge {
+   position: absolute;
+   top: -10px;
+   right: -10px;
+   padding: 5px 10px;
+   border-radius: 50%;
+   background-color: rgb(238, 77, 45);
+   color: white;
+}
+.dropdown-menu1 {
+   position: relative;
+   display: inline-block;
+}
+
+/* Nội dung Dropdown */
+.noidung_dropdown1 {
+   /*Ẩn nội dụng các đường dẫn*/
+   display: none;
+   position: absolute;
+   background-color: white;
+   min-width: 350px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+}
+
+/* Thiết kế style cho các đường dẫn tronng Dropdown */
+.noidung_dropdown1 span {
+   color: black;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+}
+
+/* thay đổi màu background khi hover vào đường dẫn */
+.noidung_dropdown1 span:hover {
+   color: rgb(238, 77, 45);
+   background-color: #ecebeb;
+}
+
+/* hiển thị nội dung dropdown khi hover */
+.dropdown-menu1:hover .noidung_dropdown1 {
+   display: block;
+}
+
+/* Thay đổi màu background cho nút khi được hover */
+.dropdown-menu1:hover .nut_dropdown1 {
+   background-color: rgb(238, 77, 45);
+}
